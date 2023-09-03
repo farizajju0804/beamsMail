@@ -15,7 +15,7 @@ app.post('/send-email', (req, res) => {
   
     const msg = {
       to,
-      from: 'ajfariz13@gmail.com',
+      from: 'info@beams.world',
       subject,
       text,
     };

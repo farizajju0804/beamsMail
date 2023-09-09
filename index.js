@@ -17,8 +17,8 @@ app.post('/send-email', (req, res) => {
       to,
       from: 'info@beams.world',
       subject,
-      text,
-      html
+      html,
+      text
     };
   
     sgMail.send(msg)

@@ -11,13 +11,14 @@ app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SEND_GRID_API_KEY)
 app.post('/send-email', (req, res) => {
-    const { to, subject, text } = req.body;
-  
+    const { to, subject, text,html } = req.body;
+    
     const msg = {
       to,
       from: 'info@beams.world',
       subject,
       text,
+      html
     };
   
     sgMail.send(msg)
